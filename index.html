@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMARTCLASS | Tecnología educativa</title>
+    <link rel="stylesheet" href="vm2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="encabezado">
+    <a class="marca" href="#" oclick="mostrarInicio(); return false;">
+        <img src="logo.png" alt="Logo SmartClass">
+        <span>SMART<span class="acento">CLASS</span></span>
+    </a>
+    <span class="etiqueta-header">EDUCACIÓN · INNOVACIÓN · ENFOQUE</span>
+</header>
+
+<nav class="menu">
+    <ul>
+        <li><a href="#" onclick="mostrarInicio(); return false;">Inicio</a></li>
+
+        <li class="submenu">
+            <a href="#" onclick="toggleSubmenu(this); return false;">Nosotros <span>⌄</span></a>
+            <ul>
+                <li><a href="#" onclick="mostrarImagen(4); return false;">Misión</a></li>
+                <li><a href="#" onclick="mostrarImagen(3); return false;">Visión</a></li>
+                <li><a href="#" onclick="mostrarImagen(1); return false;">Objetivos generales</a></li>
+                <li><a href="#" onclick="mostrarImagen(2); return false;">Objetivos específicos</a></li>
+                <li><a href="#" onclick="mostrarImagen(5); return false;">Quiénes somos</a></li>
+                <li><a href="#" onclick="mostrarImagen(26); return false;">Cronograma</a></li>
+            </ul>
+        </li>
+
+        <li class="submenu">
+            <a href="#" onclick="toggleSubmenu(this); return false;">Solución tecnológica <span>⌄</span></a>
+            <ul>
+                <li><a href="#" onclick="mostrarEvidencias(); return false;">Evidencias</a></li>
+                <li><a href="#" onclick="mostrarApp(); return false;">APP</a></li>
+                <li><a href="#" onclick="mostrarSolucion(); return false;">Solución</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#" onclick="mostrarContacto(); return false;">Contacto</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <section id="inicioHome" class="pagina inicio-home">
+        
+        <div class="hero">
+            <div class="hero-texto">
+        
+                <h1>Menos distracciones.<br><span>Más aprendizaje.</span></h1>
+                <p>
+                    SMARTCLASS es una propuesta tecnológica creada para enfrentar
+                    el uso excesivo del celular durante las clases y promover
+                    una mayor concentración en el aula.
+                </p>
+                <button class="boton principal" onclick="mostrarImagen(1)">
+                    EXPLORAR PROYECTO <span>↗</span>
+                </button>
+                <div class="hero-datos">
+                    <div><strong>01</strong><span>Identificar el problema</span></div>
+                    <div><strong>02</strong><span>Proponer una solución</span></div>
+                    <div><strong>03</strong><span>Mejorar el enfoque</span></div>
+                </div>
+            </div>
+
+            <div class="video-panel">
+                <div class="panel-superior">
+                    <span class="punto"></span>
+                    <span>VIDEO DEL PROYECTO</span>
+                    <span class="panel-en-vivo">SMARTCLASS / 01</span>
+                </div>
+                <video class="video-proyecto" controls playsinline preload="metadata">
+                    <source src="video.mp4" type="video/mp4">
+                    Tu navegador no puede reproducir este video.
+                </video>
+                <div class="video-pie">
+                    <span>Presentación del proyecto</span>
+                    <span>▶ Reproducir video</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="separador">
+            <span>EL RETO EDUCATIVO</span>
+            <span class="linea"></span>
+            <span>01 — 04</span>
+        </div>
+
+        <div class="tarjetas-inicio">
+            <article class="tarjeta">
+                <span class="numero">01 / PROBLEMA</span>
+                <div class="icono-tarjeta">▣</div>
+                <h3>Uso del celular</h3>
+                <p>El uso constante del celular puede convertirse en una fuente de distracción durante las clases.</p>
+            </article>
+            <article class="tarjeta">
+                <span class="numero">02 / EFECTO</span>
+                <div class="icono-tarjeta">◎</div>
+                <h3>Pérdida de atención</h3>
+                <p>Las notificaciones y las aplicaciones pueden dificultar la concentración de los estudiantes.</p>
+            </article>
+            <article class="tarjeta">
+                <span class="numero">03 / PROPÓSITO</span>
+                <div class="icono-tarjeta">⌁</div>
+                <h3>Mejor aprendizaje</h3>
+                <p>Promovemos un entorno que permita aprovechar mejor las explicaciones y actividades de clase.</p>
+            </article>
+            <article class="tarjeta destacada">
+                <span class="numero">04 / PROPUESTA</span>
+                <div class="icono-tarjeta">✳</div>
+                <h3>Solución tecnológica</h3>
+                <p>SMARTCLASS plantea una alternativa para ayudar a disminuir las distracciones en el aula.</p>
+                <button class="enlace-tarjeta" onclick="mostrarSolucion()">Conocer solución ↗</button>
+            </article>
+        </div>
+    </section>
+
+    
+    <section id="contenedor" class="pagina contenido-pagina">
+        <div class="banner-seccion">
+            <img src="nosotros.gif" alt="Banner de la sección Nosotros">
+            <div class="banner-caption">
+                <span>SMARTCLASS / INFORMACIÓN</span>
+                <h1 id="tituloContenido">Conoce nuestro proyecto</h1>
+            </div>
+        </div>
+
+        <div class="contenido-central">
+            <img id="img1" src="obj gener.png" alt="Objetivos generales">
+            <img id="img2" src="obj espec.png" alt="Objetivos específicos">
+            <img id="img3" src="vision.png" alt="Visión">
+            <img id="img4" src="mision.png" alt="Misión">
+            <img id="img5" src="quie.jpeg" alt="Quiénes somos">
+            <img id="img26" src="cronograma.png" alt="Cronograma">
+
+            <div class="cuadro-evidencia" id="cuadroEvidencia1">
+                <h2>Evidencia 01 <span>DOCUMENTACIÓN</span></h2>
+                <div class="contenedor-imagen-evidencia">
+                    <img id="evidencia1Imagen" src="evidencia1/1evidencia1.jpeg" alt="Evidencia 1">
+                </div>
+                <div class="controles-evidencia">
+                    <button onclick="cambiarEvidencia(1,-1)">← Anterior</button>
+                    <span id="numeroEvidencia1">1 / 5</span>
+                    <button onclick="cambiarEvidencia(1,1)">Siguiente →</button>
+                </div>
+            </div>
+
+            <div class="cuadro-evidencia" id="cuadroEvidencia2">
+                <h2>Evidencia 02 <span>PROCESO</span></h2>
+                <div class="contenedor-imagen-evidencia">
+                    <img id="evidencia2Imagen" src="evidencia2/evidencia1.jpeg" alt="Evidencia 2">
+                </div>
+                <div class="controles-evidencia">
+                    <button onclick="cambiarEvidencia(2,-1)">← Anterior</button>
+                    <span id="numeroEvidencia2">1 / 6</span>
+                    <button onclick="cambiarEvidencia(2,1)">Siguiente →</button>
+                </div>
+            </div>
+
+            <div class="cuadro-evidencia" id="cuadroEvidencia3">
+                <h2>Evidencia 03 <span>DESARROLLO</span></h2>
+                <div class="contenedor-imagen-evidencia">
+                    <img id="evidencia3Imagen" src="evidencia3/evidencia1.jpeg" alt="Evidencia 3">
+                </div>
+                <div class="controles-evidencia">
+                    <button onclick="cambiarEvidencia(3,-1)">← Anterior</button>
+                    <span id="numeroEvidencia3">1 / 5</span>
+                    <button onclick="cambiarEvidencia(3,1)">Siguiente →</button>
+                </div>
+            </div>
+
+            <div class="cuadro-evidencia" id="cuadroEvidencia4">
+                <h2>Evidencia 04 <span>RESULTADOS</span></h2>
+                <div class="contenedor-imagen-evidencia">
+                    <img id="evidencia4Imagen" src="evidencia4/evidencia1.jpeg" alt="Evidencia 4">
+                </div>
+                <div class="controles-evidencia">
+                    <button onclick="cambiarEvidencia(4,-1)">← Anterior</button>
+                    <span id="numeroEvidencia4">1 / 3</span>
+                    <button onclick="cambiarEvidencia(4,1)">Siguiente →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solucionPagina" class="pagina contenido-pagina">
+        <div class="banner-seccion banner-solucion">
+            <img src="solucion.gif" alt="Banner de la solución tecnológica">
+            <div class="banner-caption">
+                <span>SMARTCLASS / PROPUESTA</span>
+                <h1>La solución tecnológica</h1>
+            </div>
+        </div>
+        <div class="panel-info">
+            <img src="solucion.png" alt="solucion">
+            <span class="sobrelinea">NUESTRA PROPUESTA</span>
+            <h2>La tecnología al servicio del aprendizaje.</h2>
+            <p>
+                SMARTCLASS busca responder al problema de las distracciones
+                causadas por el celular durante las clases. Esta sección presenta
+                la propuesta tecnológica desarrollada para el proyecto.
+            </p>
+
+            <button class="boton principal" onclick="mostrarEvidencias()">VER EVIDENCIAS ↗</button>
+        </div>
+    </section>
+
+
+    <section id="appPagina" class="pagina contenido-pagina">
+        <div class="titulo-seccion">
+            <span class="sobrelinea">SMARTCLASS / APLICACIÓN</span>
+            <h1>APP del proyecto</h1>
+            <p>Espacio para presentar la aplicación o herramienta tecnológica de SMARTCLASS.</p>
+        </div>
+        <div class="panel-info">
+            <div class="app-icono">▣</div>
+            <h2>Aplicación SMARTCLASS</h2>
+            <p>Si tu aplicación está guardada en un archivo HTML, podemos conectarla aquí cuando tengas su nombre y ubicación.</p>
+        </div>
+    </section>
+
+    
+    <section id="contactoPagina" class="pagina contenido-pagina">
+        <div class="banner-seccion banner-contacto">
+            <img src="contacto.gif" alt="Banner de contacto">
+            <div class="banner-caption">
+                <span>SMARTCLASS / COMUNICACIÓN</span>
+                <h1>Contacto</h1>
+            </div>
+        </div>
+        <div class="panel-info contacto-info">
+            <span class="sobrelinea">HABLEMOS DEL PROYECTO</span>
+            <h2>Gracias por conocer SMARTCLASS.</h2>
+            <p>Este proyecto educativo busca generar conciencia sobre la importancia de la concentración y el uso responsable de la tecnología en clase.</p>
+            <div class="contacto-sello">SMARTCLASS <span>— PROYECTO EDUCATIVO</span></div>
+        </div>
+       
+    </section>
+</main>
+
+<footer>
+    <span>SMARTCLASS</span>
+    <span>Proyecto tecnológico educativo · Aprender con enfoque</span>
+</footer>
+
+<script>
+const titulos = {
+    1: "Objetivos generales",
+    2: "Objetivos específicos",
+    3: "Nuestra visión",
+    4: "Nuestra misión",
+    5: "Quiénes somos",
+    26: "Cronograma"
+};
+
+const totalEvidencias = { 1: 5, 2: 6, 3: 5, 4: 3 };
+const evidenciaActual = { 1: 1, 2: 1, 3: 1, 4: 1 };
+
+function ocultarPaginas() {
+    document.querySelectorAll(".pagina").forEach(pagina => {
+        pagina.classList.remove("activa");
+    });
+
+    for (let i = 1; i <= 26; i++) {
+        const imagen = document.getElementById("img" + i);
+        if (imagen) imagen.style.display = "none";
+    }
+
+    for (let i = 1; i <= 4; i++) {
+        document.getElementById("cuadroEvidencia" + i).style.display = "none";
+    }
+}
+
+function cerrarSubmenus() {
+    document.querySelectorAll(".menu ul li ul").forEach(menu => {
+        menu.style.display = "none";
+    });
+    document.querySelectorAll(".submenu > a").forEach(enlace => {
+        enlace.setAttribute("aria-expanded", "false");
+    });
+}
+
+function toggleSubmenu(elemento) {
+    const submenu = elemento.nextElementSibling;
+    const estabaAbierto = submenu.style.display === "flex";
+    cerrarSubmenus();
+
+    if (!estabaAbierto) {
+        submenu.style.display = "flex";
+        elemento.setAttribute("aria-expanded", "true");
+    }
+}
+
+function mostrarInicio() {
+    ocultarPaginas();
+    cerrarSubmenus();
+    document.getElementById("inicioHome").classList.add("activa");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function mostrarImagen(num) {
+    ocultarPaginas();
+    cerrarSubmenus();
+
+    const contenedor = document.getElementById("contenedor");
+    contenedor.classList.add("activa");
+    document.getElementById("tituloContenido").textContent = titulos[num] || "Nosotros";
+
+    const imagen = document.getElementById("img" + num);
+    if (imagen) imagen.style.display = "block";
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function mostrarEvidencias() {
+    ocultarPaginas();
+    cerrarSubmenus();
+
+    const contenedor = document.getElementById("contenedor");
+    contenedor.classList.add("activa");
+    document.getElementById("tituloContenido").textContent = "Evidencias del proyecto";
+
+    for (let i = 1; i <= 4; i++) {
+        evidenciaActual[i] = 1;
+        actualizarEvidencia(i);
+        document.getElementById("cuadroEvidencia" + i).style.display = "block";
+    }
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function cambiarEvidencia(grupo, direccion) {
+    evidenciaActual[grupo] += direccion;
+    if (evidenciaActual[grupo] < 1) evidenciaActual[grupo] = 1;
+    if (evidenciaActual[grupo] > totalEvidencias[grupo]) {
+        evidenciaActual[grupo] = totalEvidencias[grupo];
+    }
+    actualizarEvidencia(grupo);
+}
+
+function actualizarEvidencia(grupo) {
+    const numero = evidenciaActual[grupo];
+    const imagen = document.getElementById("evidencia" + grupo + "Imagen");
+
+    if (grupo === 1) {
+        imagen.src = "evidencia1/" + numero + "evidencia1.jpeg";
+    } else {
+        imagen.src = "evidencia" + grupo + "/evidencia" + numero + ".jpeg";
+    }
+
+    document.getElementById("numeroEvidencia" + grupo).textContent =
+        numero + " / " + totalEvidencias[grupo];
+}
+
+function mostrarSolucion() {
+    ocultarPaginas();
+    cerrarSubmenus();
+    document.getElementById("solucionPagina").classList.add("activa");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function mostrarApp() {
+    ocultarPaginas();
+    cerrarSubmenus();
+    document.getElementById("appPagina").classList.add("activa");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function mostrarContacto() {
+    ocultarPaginas();
+    cerrarSubmenus();
+    document.getElementById("contactoPagina").classList.add("activa");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+document.addEventListener("click", function(event) {
+    if (!event.target.closest(".menu")) cerrarSubmenus();
+});
+
+window.addEventListener("DOMContentLoaded", mostrarInicio);
+</script>
+
+</body>
+</html>
